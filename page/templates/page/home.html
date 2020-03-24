@@ -1,0 +1,48 @@
+{% extends "page/base.html" %}
+{% block content %}
+<h1 class="display-4">Calcolo Prestazione</h1>
+<div><p class="lead">Semplice pagina di calcolo dove inserendo:</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        {% load static %}
+                        <p id="train" class="card-text"><img src="{% static 'page/train2.png' %}">Locomotiva/e
+                            assegnata/e</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        {% load static %}
+                        <p class="card-text"><img src="{% static 'page/weight2.png' %}">Massa Rimorchiata
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        {% load static %}
+                        <p class="card-text"><img src="{% static 'page/where2.png' %}">Linee da Percorrere
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p class="lead">Si ottiene il via libera o meno all'utilizzo della/e loc per le caratteristiche inserite</p>
+
+<hr class="my-4">
+
+<div><small>Per accedere al servizio è necessario essere iscritti ed effettuare il Login.</small>
+    <div class="login">
+        <a class="btn btn-primary btn-md shadow-none" href="{% url 'login' %}" role="button">Login</a>
+        <a id="signup" class="btn btn-primary btn-md shadow-none" href="{% url 'registration' %}" role="button">Iscriviti</a>
+    </div>
+</div>
+
+{% endblock content%}
